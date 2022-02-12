@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+    font-family: 'Lato', sans-serif;
+}
+
+.body {
+    background: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

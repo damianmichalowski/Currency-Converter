@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="container">
+        <form class="form js-form" method="post">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Currency Converter</legend>
+                <p>
+                    <label class="form__label">
+                        <span class="form__labelText">Wybierz walutę:</span>
+                        <select class="form__field js-currency" name="currency">
+                            <option value="EUR" selected>EUR</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </label>
+                </p>
+                    <label class="form__label">
+                        <span class="form__labelText js-currencyName">Podaj kwotę(EUR)*</span>
+                        <input class="form__field form__field--bold js-sum" type="number" name="sum" step="any" required
+                            min="0" placeholder="Wpisz kwotę" autofocus>
+                    </label>
+                </p>
+                <p>
+                    <label class="form__label">
+                        <span class="form__labelText">Średni Kurs:</span>
+                        <input class="form__field js-rate" type="number" name="rate" step="any" required min="0"
+                            value="4.5358">
+                    </label>
+                </p>
+                <p>
+                    <button class="form__button">Przelicz</button>
+                    <button class="form__button form__button--clear js-buttonReset" type="reset">Wyczyść</button>
+                </p>
+                <p class="form__legend">
+                    <span class="js-sumResult">0.00</span> <span class="js-currencyResult">EUR</span> = <span class="js-result">0.00</span> PLN
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
