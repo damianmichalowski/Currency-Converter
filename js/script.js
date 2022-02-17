@@ -3,7 +3,7 @@
         console.log("Witam wszystki developerów zaglądających tutaj");
     };
 
-    const FormOnSumbit = (event) => {
+    const onFromSumbit = (event) => {
         event.preventDefault();
 
         const sumElement = document.querySelector(".js-sum");
@@ -11,15 +11,11 @@
 
         const sum = sumElement.value;
         const rate = rateElement.value;
-        const result = sumCountuing(sum, rate);
-        sumResultUpdate(result, sum);
+        const result = sum * rate;
+        updateSumResult(result, sum);
     }
 
-    const sumCountuing = (sum, rate) => {
-        return sum * rate;
-    }
-
-    const sumResultUpdate = (result, sum) => {
+    const updateSumResult = (result, sum) => {
         const resultElement = document.querySelector(".js-result");
         const sumResult = document.querySelector(".js-sumResult");
 
@@ -47,7 +43,7 @@
             currencyResult.innerText = `USD`;
             rateElement.value = 4.0049;
         }
-    
+
         if (currencyElement.value === 'EUR') {
             currencyNameElement.innerText = `Podaj kwotę(EUR)*`;
             rateElement.value = 4.5358;
@@ -60,7 +56,7 @@
         buttonResetElement.addEventListener("click", reset);
 
         const formElement = document.querySelector(".js-form");
-        formElement.addEventListener("submit", FormOnSumbit);
+        formElement.addEventListener("submit", onFromSumbit);
         formElement.addEventListener("input", currencyElementTextChanging);
         welcome();
     }
