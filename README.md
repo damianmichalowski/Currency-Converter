@@ -3,7 +3,7 @@
 https://damianmichalowski.github.io/Currency-Converter
 
 ## Description
-Made by Damian Michałowski, simple Currency-Converter. Made for practise css and JS.
+Made by Damian Michałowski, a simple Currency-Converter. Made for practicing CSS and JS.
 
 ## Technology used
 1. BEM
